@@ -7,8 +7,8 @@ function ProductsProvider(props) {
     const [productsCart, setProductsCart] = useState([]);
 
     const addProductToCart = (product) =>{
+      console.log('Context ' + product.name);
       setProductsCart([...productsCart,product]);
-      console.log(product);
       //productsCart.map(prod => console.log(prod));
    }
     

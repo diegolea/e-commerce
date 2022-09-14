@@ -8,10 +8,8 @@ function Product({product}) {
 
   const handleOnClick = (e) => {
     e.preventDefault();
-    console.log(e.target.value);
-    addProductToCart({
-      product:e.target.value,
-    });
+    //console.log(product.name);
+    addProductToCart(product);
 }
 
   return (
@@ -32,7 +30,6 @@ function Product({product}) {
         </span>
         <button 
           className="flex justify-between items-center bg-lime-500 rounded-lg p-2 pr-3 text-white text-base font-medium tracking-tight"
-          value={product.name}
           onClick={handleOnClick}  
         >
           <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-6 h-6">
